@@ -1,0 +1,19 @@
+{
+  "name": "akhfih/sparepart",
+  "description": "website penjualan sparepart berbasis php dan mysql",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Akhmad Fikron Huda",
+      "email": "akhmad.fikron.huda@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Akhfih\\Sparepart\\": "app"
+    }
+  }
+}
