@@ -32,7 +32,7 @@ CREATE TABLE `m_barang` (
   `kategori` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `kode_barang` (`kode_barang`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,6 +41,7 @@ CREATE TABLE `m_barang` (
 
 LOCK TABLES `m_barang` WRITE;
 /*!40000 ALTER TABLE `m_barang` DISABLE KEYS */;
+INSERT INTO `m_barang` VALUES (5,'5','1',2,1,'1','1');
 /*!40000 ALTER TABLE `m_barang` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -57,12 +58,13 @@ CREATE TABLE `t_penjualan` (
   `no_faktur` varchar(255) DEFAULT NULL,
   `nama_konsumen` varchar(255) DEFAULT NULL,
   `kode_barang` varchar(255) DEFAULT NULL,
-  `jumlah_satuan` int DEFAULT NULL,
+  `jumlah` int DEFAULT NULL,
+  `harga_satuan` int DEFAULT NULL,
   `harga_total` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_barangPenjualan` (`kode_barang`),
   CONSTRAINT `fk_barangPenjualan` FOREIGN KEY (`kode_barang`) REFERENCES `m_barang` (`kode_barang`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -71,6 +73,7 @@ CREATE TABLE `t_penjualan` (
 
 LOCK TABLES `t_penjualan` WRITE;
 /*!40000 ALTER TABLE `t_penjualan` DISABLE KEYS */;
+INSERT INTO `t_penjualan` VALUES (2,'2024-01-01','F1','fikron','5',1,1,1),(3,'2024-03-01','334','ff','5',33,33,33),(4,'2024-03-15','334s','vv','5',3,3,3),(5,'2024-03-15','f1','ff','5',3,3,3),(6,'2024-03-03','f1','d','5',33,33,33);
 /*!40000 ALTER TABLE `t_penjualan` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,4 +90,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-02 21:21:31
+-- Dump completed on 2024-03-03  3:35:13
