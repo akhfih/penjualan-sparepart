@@ -69,7 +69,7 @@ class BarangController {
 
         if(empty(trim($data["kode_barang"])) || empty(trim($data["nama_barang"])) || empty(trim($data["harga_jual"])) || empty(trim($data["harga_beli"])) || empty(trim($data["satuan"])) || empty(trim($data["kategori"]))){
             FlashMessage::setFlashMessage("error", "Form tidak boleh kosong");
-            header("Location: /subjects");
+            header("Location: /barang");
             exit(0);
         }
 
@@ -100,7 +100,7 @@ class BarangController {
                 $message = $exception->getMessage();
             }
             FlashMessage::setFlashMessage("error", $message);
-            header("Location: /Model");
+            header("Location: /barang");
             exit(0);
         }
     }

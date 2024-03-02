@@ -19,13 +19,13 @@
 			<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 				<!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
 				<li class="nav-item">
-					<a href="/penjualan" class="nav-link <?= $_SERVER['REQUEST_URI'] == '/' ? 'active' : '' ?>">
+					<a href="/penjualan" class="nav-link <?= $_SERVER['REQUEST_URI'] == '/penjualan' ? 'active' : '' ?>">
 						<i class="nav-icon fas fa-tachometer-alt"></i>
 						<p>Penjualan</p>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="/subjects" class="nav-link <?= $_SERVER['REQUEST_URI'] == '/barang' ? 'active' : '' ?>">
+					<a href="/barang" class="nav-link <?= $_SERVER['REQUEST_URI'] == '/barang' ? 'active' : '' ?>">
 						<i class="nav-icon fas fa-book"></i>
 						<p>Master Barang</p>
 					</a>
